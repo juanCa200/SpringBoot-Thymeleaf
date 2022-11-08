@@ -7,17 +7,16 @@ Roles de Usuario
 usuario = user
 password = 1234
 
-Solo podra observar los productos y destacarlos 
-Vista usuario
+Solo podra observar los productos y destacarlos - Vista usuario
 
 ![image](https://user-images.githubusercontent.com/87833024/200697741-edc05fad-9af5-44e9-82e0-e7b9a6f25502.png)
 
-![image](https://user-images.githubusercontent.com/87833024/200697828-4d0243a7-9619-48e6-ad06-2f0c37da7e22.png)
-
 ![image](https://user-images.githubusercontent.com/87833024/200697905-0407ab7b-c35d-4918-b812-2d3beab0be52.png)
 
+![image](https://user-images.githubusercontent.com/87833024/200697828-4d0243a7-9619-48e6-ad06-2f0c37da7e22.png)
+
 Roles de Administrador
-usuario = admin
+usuario = admin, 
 password = 1234
 
 Podra agregar, actualizar y eliminar categorias y productos, tambien tendra una vista de la tabla con los productos ordenada de manera correcta.
