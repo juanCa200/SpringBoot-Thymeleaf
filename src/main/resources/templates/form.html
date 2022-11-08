@@ -1,0 +1,156 @@
+<!doctype html>
+<html xml:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="favicon.ico">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<title>EmpleosApp | Aplicación para publicar Ofertas de .</title>
+	<!-- Bootstrap core CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="bootstrap/css/jumbotron.css" rel="stylesheet">
+	<link href="bootstrap/css/sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand" href="#">E-Commerce</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+				aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/}">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/vista/destacados}">Destacados</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/formulario}">Productos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/categoria}">Categorias</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main">
+		<div class="card">
+			<h4 class="card-header"><strong>Datos del Producto</strong></h4>
+			<div class="card-body">
+				<form th:action="@{/guardar}" th:object="${productos}" method="post" enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="nombre">Nombre</label>
+								<input type="text" th:field="*{nombre}" class="form-control" id="nombre"
+									placeholder="Nombre del producto" required>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="descripcion">Costo</label>
+								<input type="text" th:field="*{costo}" class="form-control" id="descripcion"
+									name="descripcion" placeholder="Costo del producto" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="categoria">Categoría</label>
+								<select th:field="*{categorias}" class="form-control" name="categoria" id="categoria"
+									required>
+									<th:block th:each="lista : ${categorias}">
+										<option th:text="${lista.nombre}" th:value="${lista.id}">
+										</option>
+									</th:block>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="fecha">Fecha de Publicación</label>
+								<input type="text" th:field="*{Fecha}" class="form-control" name="fecha" id="fecha"
+									placeholder="Fecha de publicacion" required="required">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<label for="formFile" class="form-label">Subir Imagen</label>
+							<input class="form-control"  name="file" type="file" id="imagen">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</form>
+			</div>
+		</div>
+		<!-- /container -->
+		<br>
+		<table class="table table-dark table-striped">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nombre</th>
+					<th>Costo</th>
+					<th>Categoria</th>
+					<th>Fecha</th>
+					<th>Editar</th>
+					<th>Eliminar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="lista : ${product}">
+					<td th:text="${lista.id}"></td>
+					<td th:text="${lista.nombre}"></td>
+					<td th:text="${lista.costo}"></td>
+					<td th:text="${lista.categorias.nombre}"></td>
+					<td th:text="${lista.Fecha}"></td>
+					<td><a class="btn btn-success" th:href="@{/buscar/{id} (id=${lista.id})}" role="button">Editar</a>
+					</td>
+					<td><a class="btn btn-danger" th:href="@{/eliminar/{id}(id=${lista.id})}" role="button">Eliminar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>
+				&copy; 2019 ProductosApp, Inc. | WebApp Desarrollada con Spring Boot | Juan Ramirez <a href="#">Privacy</a>
+				<a href="#">Terms</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="tinymce/tinymce.min.js"></script>
+	<script>
+
+		$(function () {
+			$("#fecha").datepicker({dateFormat: 'dd-mm-yy'});
+		}
+		);
+
+	</script>
+</body>
+
+</html>

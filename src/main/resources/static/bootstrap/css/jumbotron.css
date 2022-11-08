@@ -1,0 +1,13 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+.container .row h2{	
+		padding-left: 11rem;
+}
+.container .row h6{	
+		padding-left: 11rem;
+}.container .row a{	
+		margin-left: 11rem;
+}
