@@ -15,7 +15,7 @@
 	<name>ProyectoFinal-Ecommerc</name>
 	<description>proyecto final sistema de tienda</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
