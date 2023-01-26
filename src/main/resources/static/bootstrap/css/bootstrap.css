@@ -4755,6 +4755,7 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 576px) {
+	
   .card-columns {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -4769,6 +4770,8 @@ input[type="button"].btn-block {
     display: inline-block;
     width: 100%;
   }
+  
+  
 }
 
 .accordion > .card {
@@ -10035,4 +10038,5 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
 /*# sourceMappingURL=bootstrap.css.map */

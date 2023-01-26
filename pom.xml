@@ -12,6 +12,7 @@
 	<groupId>com.spring</groupId>
 	<artifactId>com.spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>ProyectoFinal-Ecommerc</name>
 	<description>proyecto final sistema de tienda</description>
 	<properties>

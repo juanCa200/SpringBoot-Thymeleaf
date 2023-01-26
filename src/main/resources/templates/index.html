@@ -43,7 +43,7 @@
 					</li>
 				</ul>
 				<form method="post" th:action="@{/logout}">
-					<a href="#" class="btn btn-danger" onclick="this.parentNode.submit();" style="background-color: #efb810; color:black; border-color:#efb810">Logout</a>
+					<a href="#" class="btn" onclick="this.parentNode.submit();" style="background-color: #efb810; color:black; border-color:#efb810"><i class="fa-solid fa-right-from-bracket"></i></a>
 				</form>
 			</div>
 		</nav>
@@ -57,7 +57,7 @@
 				<p style="color: white;">Puedes buscar por descripción.</p>
 				<form class="form-inline" th:action="@{/}">
 					<input type="text" class="form-control mb-3" id="exampleFormControlInput1"
-						placeholder="Escriba una búsqueda" name="palabra" required>&nbsp;
+						placeholder="Busca en Amazon" name="palabra" required>&nbsp;
 					<button type="submit" class="btn btn-primary mb-3" style="background-color: #efb810; color:black; border-color:#efb810" >Buscar</button>
 				</form>
 			</div>
@@ -66,11 +66,15 @@
 	<div id="carouselExampleControls" class="carousel slide" style="margin-top: -35px; background-color:#131921">
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
-	      <img class="d-block w-100" th:src="@{/images/amazon.jpeg}" alt="Start Slideshow" height="400">
+	      <img style="width: 100%; height:auto"class="d-block w-100" th:src="@{/images/envio.jpeg}" alt="Start Slideshow" height="400">
 	    </div>
 	    
 	    <div class="carousel-item">
-	      <img class="d-block w-100" th:src="@{/images/amazon2.jpg}" height="400">
+	      <img style="width: 100%; height:auto" class="d-block w-100" th:src="@{/images/oferta.jpg}" height="400">
+	    </div>
+	    
+	     <div class="carousel-item">
+	      <img style="width: 100%; height:auto" class="d-block w-100" th:src="@{/images/celulares.png}" height="400">
 	    </div>
 	    
 	  </div>
@@ -86,9 +90,10 @@
 
 <div class="card" style="width: 18rem; display:inline-flex; background-color:white; margin-top:15px; margin-left:15px" th:each="productos:${lista}">
   <img th:src="@{/images/{img} (img=${productos.imagen})}" class="card-img-top" alt="..." width="200">
+  <hr style="border-color:black">
   <div class="card-body">
     <h5 class="card-title" style="color:black" th:text="${productos.nombre}"></h5>
-    <p class="card-text" style="color: black;"th:text="'Categoria :' + ' ' + ${productos.categorias.nombre}"></p>
+    <p class="card-text" style="color: black;"th:text="${productos.categorias.nombre}"></p>
     <p class="card-text" style="color:black;" th:text="${productos.costo}"></p>
   </div>
 </div>
@@ -117,7 +122,7 @@
 			</div>
 		</div>
     
--->!
+-->
 	</main>
 
 <br><br><br>
