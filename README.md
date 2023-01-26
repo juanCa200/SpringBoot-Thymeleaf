@@ -29,6 +29,8 @@ password = 1234
 
 Podra agregar, actualizar y eliminar categorias y productos, tambien tendra una vista de la tabla con los productos ordenada de manera correcta.
 
+![image](https://user-images.githubusercontent.com/87833024/214858777-7035af14-6fa9-4d48-8dc2-433e3a8719a9.png)
+
 
 
 
