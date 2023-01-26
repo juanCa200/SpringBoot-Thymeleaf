@@ -1,7 +1,16 @@
 # SpringBoot-Thymeleaf
 Ecommerce básico con roles, hecho con SpringBoot (Spring Security, Spring MVC, Spring JPA), Thymeleaf, Boostrap y Mysql
 
-![image](https://user-images.githubusercontent.com/87833024/200697624-31d8204f-91fe-411f-8683-bf7aa33ba0ba.png)
+Login
+
+![image](https://user-images.githubusercontent.com/87833024/214857289-7db94921-6cfd-48f2-88b2-17a8c6be9a15.png)
+
+![image](https://user-images.githubusercontent.com/87833024/214855282-0bdbcf88-30c2-46aa-a24a-062f65c1fda5.png)
+
+
+Responsive
+
+![image](https://user-images.githubusercontent.com/87833024/214855465-5d998861-cb89-4bd6-8668-736d4d30733b.png)
 
 Roles de Usuario
 usuario = user
@@ -9,11 +18,10 @@ password = 1234
 
 Solo podra observar los productos y destacarlos - Vista usuario
 
-![image](https://user-images.githubusercontent.com/87833024/200697741-edc05fad-9af5-44e9-82e0-e7b9a6f25502.png)
+![image](https://user-images.githubusercontent.com/87833024/214858352-c7ece92c-785b-4d39-906d-f6330a554e0c.png)
 
-![image](https://user-images.githubusercontent.com/87833024/200697905-0407ab7b-c35d-4918-b812-2d3beab0be52.png)
 
-![image](https://user-images.githubusercontent.com/87833024/200697828-4d0243a7-9619-48e6-ad06-2f0c37da7e22.png)
+![image](https://user-images.githubusercontent.com/87833024/214855507-c9602b82-affa-40d4-be0d-78d50e446a85.png)
 
 Roles de Administrador
 usuario = admin, 
@@ -21,9 +29,10 @@ password = 1234
 
 Podra agregar, actualizar y eliminar categorias y productos, tambien tendra una vista de la tabla con los productos ordenada de manera correcta.
 
-![image](https://user-images.githubusercontent.com/87833024/200698252-e44a5e61-3d5a-4130-b92a-38521c7c7ea9.png)
+![image](https://user-images.githubusercontent.com/87833024/214858777-7035af14-6fa9-4d48-8dc2-433e3a8719a9.png)
 
-![image](https://user-images.githubusercontent.com/87833024/200698315-46cc9ec9-336a-4c14-9ce4-33dc774f87a3.png)
+
+
 
 
 
