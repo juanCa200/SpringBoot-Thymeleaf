@@ -2,13 +2,14 @@
 Ecommerce básico con roles, hecho con SpringBoot (Spring Security, Spring MVC, Spring JPA), Thymeleaf, Boostrap y Mysql
 
 Login
+
 ![image](https://user-images.githubusercontent.com/87833024/214857289-7db94921-6cfd-48f2-88b2-17a8c6be9a15.png)
 
-Portada- Inicio - ADMIN
 ![image](https://user-images.githubusercontent.com/87833024/214855465-5d998861-cb89-4bd6-8668-736d4d30733b.png)
 
 Responsive
 ![image](https://user-images.githubusercontent.com/87833024/214855282-0bdbcf88-30c2-46aa-a24a-062f65c1fda5.png)
+
 
 Roles de Usuario
 usuario = user
