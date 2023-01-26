@@ -18,6 +18,8 @@ password = 1234
 
 Solo podra observar los productos y destacarlos - Vista usuario
 
+![image](https://user-images.githubusercontent.com/87833024/214858352-c7ece92c-785b-4d39-906d-f6330a554e0c.png)
+
 
 ![image](https://user-images.githubusercontent.com/87833024/214855507-c9602b82-affa-40d4-be0d-78d50e446a85.png)
 
