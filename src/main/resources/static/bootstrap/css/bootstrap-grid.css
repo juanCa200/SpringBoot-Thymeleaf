@@ -4,7 +4,6 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- 
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -811,7 +810,6 @@ html {
 }
 
 @media (min-width: 1200px) {
-
   .col-xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;

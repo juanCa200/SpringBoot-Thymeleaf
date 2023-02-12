@@ -16,32 +16,33 @@
 	<link href="bootstrap/css/jumbotron.css" rel="stylesheet">
 	<link href="bootstrap/css/sticky-footer-navbar.css" rel="stylesheet">
 </head>
-
-<body>
-
+<body style="background-color:#dcdcdc;">
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<a class="navbar-brand" href="#">E-Commerce</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #131921;">
+			<a class="navbar-brand" href="#"><img th:src="@{/images/logo.png}" width="100" height="50"></a>
+			<button style="background-color:#efb810;"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
 				aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"><i class="fa-solid fa-bars" style="padding-top: 7px;"></i></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault" style="font-family: Amazon Ember,Arial, sans serif;">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" th:href="@{/}">Inicio</a>
+						<a class="nav-link" th:href="@{/}" style="color: white;">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" th:href="@{/vista/destacados}">Destacados</a>
+						<a class="nav-link" th:href="@{/vista/destacados}" style="color: white;">Carrito 🛒</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/formulario}">Productos</a>
+						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/formulario}" style="color: white;">Productos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/categoria}">Categorias</a>
+						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/categoria}" style="color: white;">Categorias</a>
 					</li>
 				</ul>
+				<form method="post" th:action="@{/logout}">
+					<a href="#" class="btn" onclick="this.parentNode.submit();" style="background-color: #efb810; color:black; border-color:#efb810"><i class="fa-solid fa-right-from-bracket"></i></a>
+				</form>
 			</div>
 		</nav>
 	</header>

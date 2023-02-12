@@ -15,34 +15,36 @@
 	<!-- Custom styles for this template -->
 	<link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
 	<link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
 
-<body>
+<body style="background-color:#dcdcdc;">
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<a class="navbar-brand" href="#">E-Commerce</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #131921;">
+			<a class="navbar-brand" href="#"><img th:src="@{/images/logo.png}" width="100" height="50"></a>
+			<button style="background-color:#efb810;"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
 				aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"><i class="fa-solid fa-bars" style="padding-top: 7px;"></i></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault" style="font-family: Amazon Ember,Arial, sans serif;">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" th:href="@{/}">Inicio</a>
+						<a class="nav-link" th:href="@{/}" style="color: white;">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" th:href="@{/vista/destacados}">Destacados</a>
+						<a class="nav-link" th:href="@{/vista/destacados}" style="color: white;">Carrito</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/formulario}">Productos</a>
+						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/formulario}" style="color: white;">Productos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/categoria}">Categorias</a>
+						<a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/categoria}" style="color: white;">Categorias</a>
 					</li>
 				</ul>
 				<form method="post" th:action="@{/logout}">
-					<a href="#" class="btn btn-danger" onclick="this.parentNode.submit();">Logout</a>
+					<a href="#" class="btn" onclick="this.parentNode.submit();" style="background-color: #efb810; color:black; border-color:#efb810"><i class="fa-solid fa-right-from-bracket"></i></a>
 				</form>
 			</div>
 		</nav>
@@ -50,26 +52,21 @@
 
 	<main role="main">
 		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="container">
 		<br>
-			<h2 class="font-weight-bold text-center text-capitalize">PRODUCTOS</h2>
-			<hr>
-			<br><br>
-			<div class="row" th:each="destacar : ${destacados}" )>
-				<div class="col-md-3">
-					<img class="rounded mx-auto d-block" th:src="@{/images/{img} (img=${destacar.imagen})}"
-						alt="Generic placeholder image" width="220" height="220">
-				</div>
-				<div class="col-md-9">
-					<h2 th:text="${destacar.nombre}"></h2>
-					<h6 class="card-title" th:text="${destacar.costo}"></h6>
-					<a class="btn btn-danger" th:href="@{/eliminar/destacado/{id} (id=${destacar.id})}" role="button">Eliminar</a>
-				    <br><br><br><br><br>
-				</div>								
-			</div>
-		</div>
+		<div class="card" style="width: 18rem; display:inline-flex; background-color:white; margin-top:15px; margin-left:15px" th:each="destacado:${destacados}">
+  <img th:src="@{/images/{img} (img=${destacado.imagen})}" class="card-img-top" alt="..." width="200">
+  <hr style="border-color:black">
+  <div class="card-body">
+    <h5 class="card-title" style="color:black" th:text="${destacado.nombre}"></h5>
+    <p class="card-text" style="color:black;" th:text="${destacado.costo}"></p>
+	<a class="btn btn-danger" th:href="@{/eliminar/destacado/{id} (id=${destacado.id})}" role="button">Eliminar</a>
+  </div>
+</div>
+
+<br>
+<br>
+
 	</main>
-!-->
 	<footer class="footer">
 		<div class="container">
 			<p>

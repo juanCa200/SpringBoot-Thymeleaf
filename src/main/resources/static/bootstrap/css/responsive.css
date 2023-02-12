@@ -1,0 +1,38 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+@media (max-width: 650px) {
+	
+	.carton{
+      display:inline-block; 
+      height:auto;
+      margin-left:26%;
+	}
+	.card{
+      margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 570px) {
+	
+	.carton{
+      display:inline-block; 
+      height:auto;
+      margin-left:20%;
+	}
+	.card{
+      margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 1120px) and (max-width:1350px) {
+	
+	.carton{
+      display:inline-block; 
+      height:auto;
+      margin-left:10%;
+	}
+	.card{
+      margin-bottom: 30px;
+	}
+}
+
+	

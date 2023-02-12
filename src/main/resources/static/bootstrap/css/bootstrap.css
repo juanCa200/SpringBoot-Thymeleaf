@@ -1,9 +1,4 @@
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -1338,7 +1333,7 @@ pre code {
     margin-left: 91.666667%;
   }
 }
-
+/*
 @media (min-width: 1200px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
@@ -1509,7 +1504,7 @@ pre code {
   .offset-xl-11 {
     margin-left: 91.666667%;
   }
-}
+}*/
 
 .table {
   width: 100%;
@@ -1794,6 +1789,7 @@ pre code {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.075);
 }
+
 
 @media (max-width: 575.98px) {
   .table-responsive-sm {
@@ -4755,7 +4751,6 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 576px) {
-	
   .card-columns {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -4770,8 +4765,6 @@ input[type="button"].btn-block {
     display: inline-block;
     width: 100%;
   }
-  
-  
 }
 
 .accordion > .card {
@@ -10038,5 +10031,4 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
 /*# sourceMappingURL=bootstrap.css.map */
